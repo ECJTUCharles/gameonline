@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../images/bg.jpg) repeat;
+  background-size: 100%;
+  opacity: 0.8;
+}
+body .bigbg {
+  width: 100%;
+  overflow: hidden;
+}
+body .bigbg .header {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+body .bigbg .header .score {
+  width: 280px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+body .bigbg .header .score span {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  margin: 0 10px;
+}
+body .bigbg h2 {
+  text-align: center;
+}
+body .bigbg .contain {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+body .bigbg .contain .left {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  opacity: 0.9;
+  border-radius: 10px;
+  padding: 10px;
+}
+body .bigbg .contain .right {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  opacity: 0.9;
+  border-radius: 10px;
+  padding: 10px;
+}
+body .bigbg .contain .right .zhanshi {
+  width: 70%;
+  height: 90%;
+  float: left;
+  line-height: 90%;
+}
+body .bigbg .contain .right .zhanshi img {
+  margin-top: 22%;
+  margin-left: 5%;
+}
+body .bigbg .contain .right .choose {
+  width: 30%;
+  height: 90%;
+  float: left;
+}
+body .bigbg .contain .right .choose .jiandao {
+  width: 100%;
+  height: 30%;
+  background: url(../images/p1.png) no-repeat;
+  background-size: 100%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+body .bigbg .contain .right .choose .shitou {
+  width: 100%;
+  height: 30%;
+  background: url(../images/p2.png) no-repeat;
+  background-size: 100%;
+  margin-bottom: 5%;
+}
+body .bigbg .contain .right .choose .bu {
+  width: 100%;
+  height: 30%;
+  background: url(../images/p3.png) no-repeat;
+  background-size: 100%;
+}
+body .bigbg button {
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: bold;
+}

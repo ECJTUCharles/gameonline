@@ -2,15 +2,58 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>石头剪刀布!</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/css.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div class="bigbg">
+        <div class="header">
+            <div class="score">
+                <span id="leftnum">0</span>
+                <span>:</span>
+                <span id="rightnum">0</span>            
+            </div>
+        </div>
+        <h2 id="word">欢迎来到励强的游戏世界</h2>
+        <div class="contain">
+            <div class="left">
+                <p style="text-align:center;">我是左边玩家</p>
+                <div class="leftpart" id="pc">
+                  <img src="./images/2.gif" alt="">
+                </div>
+            </div>
+            <div class="center" id="center">
+                <img src="./images/2.gif" alt="">
+            </div>
+            <div class="right">
+                <p style="text-align:center;">我是右边玩家</p>
+                <div class="zhanshi" id="you">
+                    <img src="./images/p1.png" alt="">
+                </div>
+                <div class="choose">
+                    <div class="jiandao" id="jd" onclick="p(1)">
+                        <!-- <img src="./images/p1.png" alt="剪刀"> -->
+                    </div>
+                    <div class="shitou" id="st" onclick="p(2)">
+                        <!-- <img src="./images/p2.png" alt="石头"> -->
+                    </div>
+                    <div class="bu" id="bu" onclick="p(3)">
+                        <!-- <img src="./images/p3.png" alt="布"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn center btn-danger" id="agin" onclick="agin()"> 
+                AGAIN
+        </button>
+    </div>
 
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <!-- We are using Node.js <script>document.write(process.versions.node)</script>,  
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>. -->
+	  <script src="./js/index.js"></script>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
