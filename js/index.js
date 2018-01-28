@@ -23,7 +23,7 @@ var se = null,time=20,you=0,arr=new Array('p1.png','p2.png','p3.png');
                 document.getElementById('pc').innerHTML = '';
                 // document.getElementById('cu').innerHTML = '';
                 // document.getElementById('you').innerHTML= '请选择'; 
-                se = setInterval('t()',50); 
+                // se = setInterval('t()',50); 
                 i += 1;
                 leftnum.innerHTML=i;      
             }
@@ -39,18 +39,26 @@ var se = null,time=20,you=0,arr=new Array('p1.png','p2.png','p3.png');
                     var b = pc-you;
                     if(b>0){
                         if(b==1){
-                            str += '电脑赢';
+                            // str += '电脑赢';
                             i += 1;
-                            leftnum.innerHTML=i;   
+                            leftnum.innerHTML=i;
+                            console.log("你输了");
+                            word.innerHTML = "你输了";   
                         }else{
-                            str += '你赢啦';   
+                            // str += '你赢啦';
+                            console.log("你赢了");
+                            word.innerHTML = "你赢了";  
                         }               
                     }else{
                         b = b*-1;   
                         if(b==1){
-                            str += '你赢啦';   
+                            // str += '你赢啦';
+                            console.log("你赢了");
+                            word.innerHTML = "你赢了";   
                         }else{
-                            str += '电脑赢';   
+                            // str += '电脑赢'; 
+                            console.log("你输了");
+                            word.innerHTML = "你输了";  
                         }   
                     }       
                 }
