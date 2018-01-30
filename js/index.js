@@ -3,34 +3,34 @@ var right = document.getElementById("rightnum");
 var word = document.getElementById("word");
 var i = 0;
 var j = 0;
-var se = null,time=20,you=0,arr=new Array('p1.png','p2.png','p3.png');
+var se = null,time=20,you=0,arr=new Array('<img src="./images/p1.png" alt="">','<img src="./images/p2.png" alt="">','<img src="./images/p3.png" alt="">');
             function p(n){
                 you = n;
-                document.getElementById('you').innerHTML=s(n);
+                // document.getElementById('you').innerHTML=s(n);
                 document.getElementById('st').disabled=true;
                 document.getElementById('bu').disabled=true;
                 document.getElementById('jd').disabled=true;
                 document.getElementById('center').style.display ="block";
-                se = setInterval('t()',50);
-                
             }
             function agin(){
                 document.getElementById('st').disabled=false;
                 document.getElementById('jd').disabled=false;
-                document.getElementById('bu').disabled=false;       
-                document.getElementById('center').style.display = 'none';
+                document.getElementById('bu').disabled=false;
+                se = setTimeout(() => {
+                    t();
+                    clearTimeout();
+                }, 2000);
+                document.getElementById('center').style.display = 'block';  
                 document.getElementById('you').innerHTML = '';      
                 document.getElementById('pc').innerHTML = '';
-                // document.getElementById('cu').innerHTML = '';
-                // document.getElementById('you').innerHTML= '请选择'; 
-                // se = setInterval('t()',50); 
                 i += 1;
-                leftnum.innerHTML=i;      
+                leftnum.innerHTML=i;
             }
+            clearTimeout();
             function bt(){
                 var pc = Math.floor(Math.random() * 3 + 1);
-                document.getElementById('pc').innerHTML = s(pc);
-                var str='';
+                document.getElementById('pc').innerHTML = arr[pc];
+                // var str='';
                 if(pc==you){
                     // str += '平局';
                     console.log("平局");
@@ -64,9 +64,11 @@ var se = null,time=20,you=0,arr=new Array('p1.png','p2.png','p3.png');
                 }
             }
             function t(){
-                var score=[];
-                score.append = i;
-                alert(score);
+                document.getElementById('center').style.display = 'none';
+                se = null;
             }
-            // document.getElementById('la').style.display = 'block';
-            // document.getElementById('cu').innerHTML = str;
+            // 点击按钮的十时候调用函数，显示中间的gif动图
+            document.getElementById("agin").addEventListener("click",function(){
+                    agin();
+                    word.innerHTML = "猜拳中...";
+                },false);

@@ -51,6 +51,17 @@ body .bigbg .contain .left {
   border-radius: 10px;
   padding: 10px;
 }
+body .bigbg .contain .left .leftpart {
+  position: relative;
+}
+body .bigbg .contain .left .leftpart img {
+  position: absolute;
+  top: 50px;
+  left: 20%;
+}
+body .bigbg .contain .center {
+  display: none;
+}
 body .bigbg .contain .right {
   width: 300px;
   height: 300px;
